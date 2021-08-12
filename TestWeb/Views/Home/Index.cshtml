@@ -1,0 +1,62 @@
+﻿@model ICollection<TestWeb.Models.ViewModels.Factura>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <div>
+        <div class="card card-outline-info">
+            <div class="card-header">
+                <h3 class="title m-b-0 text-black-50"><i class="fa fa-plus-circle"></i> Facturas</h3>
+            </div>
+            <div>
+                <div class="table-responsive" id="mydatatable-container">
+                    <table id="mydatatable" class="table table-striped table-bordered dt-responsive nowrap text-center" cellspacing="0" width="100%">
+                       
+                        <thead>
+                            <tr>
+                                <th>
+                                    Fecha
+                                </th>
+                                <th>
+                                    Factura
+                                </th>
+                                <th>
+                                    Identificacion Cliente
+                                </th>
+                                <th>
+                                    Cliente
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Fecha
+                                    </td>
+                                    <td>
+                                        @item.Numerofactura
+                                    </td>
+                                    <td>
+                                        @item.Documentocliente
+                                    </td>
+                                    <td>
+                                        @item.Nombrecliente
+                                    </td>
+                                </tr>
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
